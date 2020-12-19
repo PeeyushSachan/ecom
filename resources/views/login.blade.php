@@ -182,8 +182,10 @@ function validatepassoflogin()
 
 
 
-   <form class="F1-bg" id="F1"  method="POST" action="/login/login.php" onsubmit="return submitdataoflogin()">
-     <h3 class="text-center" style="color: #61892F;" >Login</h3>
+   <form class="F1-bg" id="F1"  method="POST" action="/login" onsubmit="return submitdataoflogin()">
+     @csrf
+    
+    <h3 class="text-center" style="color: #61892F;" >Login</h3>
      
      <div>
      <p class="bg-success text-white px-4 rounded"></p>
@@ -214,7 +216,7 @@ function validatepassoflogin()
      <div class="input-group-prepend">
        <div class="input-group-text"><i class="fas fa-lock"></i></div>
      </div>
- <input type="password" class="form-control"  placeholder="Password" name="lpassword"  id="login_pass" maxlength="20">
+ <input type="password" class="form-control"  placeholder="Password" name="lpass"  id="login_pass" maxlength="20">
 </div>
 </div>
 </div>
