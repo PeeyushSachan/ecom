@@ -42,7 +42,7 @@ use App\Http\Controllers\Procon;
     </form>
       
     <span class="navbar-text">
-      <a class="nav-link" href="#">Cart({{$totalc}})</a>
+      <a class="nav-link" href="/cartlist">Cart({{$totalc}})</a>
     </span>
   </div>
 </nav>

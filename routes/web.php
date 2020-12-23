@@ -21,16 +21,19 @@ use App\Http\Controllers\Procon;
 route::view('/login','login');
 
 route::get('/',[Mcon::class,'Mfun']);
-
 route::post('/login',[Mcon::class,'login']);
-route::get('/home',[Procon::class,'index']);
+route::get('/logout',[Mcon::class,'logout']);
 
+
+route::get('/home',[Procon::class,'index']);
 route::get('/detail/{detail}',[Procon::class,'detail']);
 route::get('/search',[Procon::class,'search']);
 route::post('/addtocart',[Procon::class,'addtocart']);
+route::get('/cartlist',[Procon::class,'cartlist']);
+
+route::get('/cartremove/{producIdt}',[Procon::class,'cartremove']);
 
 
-route::get('/logout',[Mcon::class,'logout']);
 
 
 

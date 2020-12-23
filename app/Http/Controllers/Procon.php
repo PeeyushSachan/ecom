@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 class Procon extends Controller
@@ -67,5 +68,30 @@ class Procon extends Controller
        return Cart::where('user_id',$userId)->count();
 
    }
+
+
+  public function cartlist()
+  {
+
+    $userId=Session::get('user')['id'];
+    $product=DB::table('cart')
+    ->join('product','cart.product_id','product.id')
+    ->select('product.*','cart.id as cart_id')
+    ->where('cart.user_id',$userId)
+    ->get();
+return view('cartlist',["products"=>$product]);
+
+       
+  }
+
+  public function cartremove($productId)
+  {
+   // $userId=Session::get('user')['id'];
+    // $cart=new Cart;
+     Cart::destroy($productId);
+     return Redirect::back();
+
+
+  }
 
 }
