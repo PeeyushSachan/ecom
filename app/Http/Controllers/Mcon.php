@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Session;
 
 class Mcon extends Controller
 {
@@ -20,8 +21,8 @@ class Mcon extends Controller
    
    if($user && Hash::check($req->lpass, $user->pass))
     {
-      $req->session()->put('sesuser', $user->name);
-        return redirect('welcome');
+      $req->session()->put('user', $user);
+        return redirect('home');
     }
 
     else{
@@ -33,6 +34,10 @@ class Mcon extends Controller
     }
   }
 
-
+public function logout()
+{
+  Session::forget('user');
+  return redirect('/login');
+}
 
 }

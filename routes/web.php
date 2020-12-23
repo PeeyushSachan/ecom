@@ -19,13 +19,18 @@ use App\Http\Controllers\Procon;
     return view('welcome');
 });*/
 route::view('/login','login');
-route::view('/welcome','welcome');
+
 route::get('/',[Mcon::class,'Mfun']);
 
 route::post('/login',[Mcon::class,'login']);
 route::get('/home',[Procon::class,'index']);
 
+route::get('/detail/{detail}',[Procon::class,'detail']);
+route::get('/search',[Procon::class,'search']);
+route::post('/addtocart',[Procon::class,'addtocart']);
 
+
+route::get('/logout',[Mcon::class,'logout']);
 
 
 
