@@ -34,21 +34,6 @@
 
 
 
- id Primary	bigint(20)		UNSIGNED	No	None		AUTO_INCREMENT	Change Change	Drop Drop	
-More More
-	2	product_id	int(11)			No	None			Change Change	Drop Drop	
-More More
-	3	user_id	int(11)			No	None			Change Change	Drop Drop	
-More More
-	4		varchar(255)	utf8mb4_unicode_ci		No	None			Change Change	Drop Drop	
-More More
-	5		varchar(255)	utf8mb4_unicode_ci		No	None			Change Change	Drop Drop	
-More More
-	6		varchar(255)	utf8mb4_unicode_ci		No	None			Change Change	Drop Drop	
-More More
-	7	payment_status
-
-
 
 </div>
 
