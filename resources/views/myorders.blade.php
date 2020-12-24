@@ -7,7 +7,7 @@
 @section('content')
 
 
-<h2>Myorders</h2>
+<h2>Myorders-</h2>
 
 <div class="container custom-product bg-gary">   
    
