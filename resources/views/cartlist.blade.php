@@ -8,6 +8,7 @@
 
 
 <h2>this is our cart</h2>
+<a class="btn btn-warning col-sm-2 float-right" href="/ordernow">Order Now-></a>
 <div class="container custom-product bg-gary">   
    
 @foreach($products as $product )

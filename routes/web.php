@@ -30,8 +30,13 @@ route::get('/detail/{detail}',[Procon::class,'detail']);
 route::get('/search',[Procon::class,'search']);
 route::post('/addtocart',[Procon::class,'addtocart']);
 route::get('/cartlist',[Procon::class,'cartlist']);
-
 route::get('/cartremove/{producIdt}',[Procon::class,'cartremove']);
+route::get('/ordernow',[Procon::class,'ordernow']);
+route::post('/orderplace',[Procon::class,'orderplace']);
+route::get('/myorders',[Procon::class,'myorders']);
+
+
+
 
 
 
